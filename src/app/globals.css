@@ -80,3 +80,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+.test-container {
+  @apply flex h-screen items-center justify-center bg-gray-900 text-white;
+}
+.test-title {
+  @apply text-4xl font-bold;
+}
