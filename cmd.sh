@@ -8,6 +8,7 @@ function display_help {
   echo
   echo "front Commands:"
   echo "  cmd up          Start the application"
+  echo "  cmd build       Build site"
   echo "  cmd shell       Enter in container"
   echo "  cmd shellr      Enter in container with root user"
   echo "  cmd clean.......Clean the application"
@@ -17,9 +18,11 @@ function display_help {
 
 if [ $# -gt 0 ]; then
   if [ "$1" == "shell" ]; then
-    docker compose exec -it nextjs-ssg bash
+    docker compose exec -it next-ssg bash
   elif [ "$1" == "shellr" ]; then
-    docker container exec -it --user root nextjs-ssg /bin/sh
+    docker container exec -it --user root next-ssg /bin/sh
+  elif [ "$1" == "build" ]; then
+    docker container exec -it next-ssg /bin/sh -c "npm run build"
   elif [ "$1" == "clean" ]; then
     docker compose down --volumes --rmi all
   elif [ "$1" == "help" ] || [ "$1" == "--help" ] || [ "$1" == "-h" ]; then

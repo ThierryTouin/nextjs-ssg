@@ -18,8 +18,7 @@ export default function AboutPage() {
         <section>
           <h2 className="text-2xl font-semibold mb-4">Notre Mission</h2>
           <p className="text-muted-foreground">
-            Notre mission est de fournir des services exceptionnels qui dépassent les attentes de nos clients. Nous nous efforçons d'innover constamment et de maintenir les plus hauts standards de qualité dans tout ce que nous faisons.
-          </p>
+          Notre%20mission%20est%20de%20fournir%20des%20services%20exceptionnels%20qui%20d%C3%A9passent%20les%20attentes%20de%20nos%20clients.%20Nous%20nous%20effor%C3%A7ons%20d%27innover%20constamment%20et%20de%20maintenir%20les%20plus%20hauts%20standards%20de%20qualit%C3%A9%20dans%20tout%20ce%20que%20nous%20faisons.          </p>
         </section>
         
         <Separator />
