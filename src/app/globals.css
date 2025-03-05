@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -74,10 +73,12 @@
 
 @layer base {
   * {
-    @apply border-border;
+    /*@apply border-border;*/
+    @apply border-gray-300;
   }
   body {
-    @apply bg-background text-foreground;
+    /*@apply bg-background text-foreground;*/
+    @apply bg-gray-900 text-white;
   }
 }
 

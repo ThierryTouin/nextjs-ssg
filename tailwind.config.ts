@@ -91,6 +91,4 @@ const config: Config = {
     tailwindcssAnimate
   ],
 };
-//export default config;
-
-module.exports = { config };
+export default config;
