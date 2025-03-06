@@ -9,3 +9,6 @@ npm i @hookform/resolvers @next/swc-wasm-nodejs @radix-ui/react-accordion @radix
 
 
 /mnt/data/work/dev-perso/nextjs-ssg/docs (main) $ touch .nojekyll
+
+
+https://github.com/theodorusclarence/ts-nextjs-tailwind-starter
