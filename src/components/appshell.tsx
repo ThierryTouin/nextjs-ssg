@@ -90,7 +90,7 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
                     className="w-full object-contain"
                   />
                 </div>
-                <div className="font-semibold">Yudistira Ashadi</div>
+                <div className="font-semibold">Cathy Xxxxxx</div>
               </Link>
             </div>
 
@@ -138,28 +138,17 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
               >
                 Test
               </Button>
-              {/* <Button
-                component={Link}
-                href="/blog"
-                size="xs"
-                radius="xl"
-                variant={pathname.startsWith("/blog") ? "filled" : "subtle"}
-                classNames={{
-                  label: "text-black dark:text-inherit",
-                }}
-              >
-                Blogs
-              </Button> */}
               <Button
                 component={Link}
-                href="#contacts"
+                href="/contacts"
                 size="xs"
                 radius="xl"
-                variant={"subtle"}
+                variant={
+                  pathname.startsWith("/contacts") ? "filled" : "subtle"
+                }
                 classNames={{
                   label: "text-black dark:text-inherit",
                 }}
-                onClick={handleContacts}
               >
                 Contacts
               </Button>
@@ -231,40 +220,40 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
             </Link>
 
             <Link
-              href={"https://www.linkedin.com/in/yudistiraashadi/"}
+              href={"https://www.linkedin.com/in/xxxxxxxxxxxxxx/"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 duration-200 hover:text-yellow-500"
             >
               {/* edit the icon so that it resize bigger and glow when hoverring */}
               <IconBrandLinkedin size={40} />
-              <div>@yudistiraashadi</div>
+              <div>@cathyxxxxxx</div>
             </Link>
 
             <Link
-              href={"https://github.com/yudistiraashadi"}
+              href={"https://github.com/xxxxxxxxxxxxxxxx"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 duration-200 hover:text-yellow-500"
             >
               <IconBrandGithub size={35} />
-              <div>@yudistiraashadi</div>
+              <div>@cathyxxxxxx</div>
             </Link>
 
             <Link
-              href={"https://x.com/yudistiraashadi"}
+              href={"https://x.com/xxxxxxxxxxxxxxx"}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 duration-200 hover:text-yellow-500"
             >
               <IconBrandX size={35} />
-              <div>@yudistiraashadi</div>
+              <div>@cathyxxxxxx</div>
             </Link>
           </div>
 
           {/* most bottom */}
           <div className="flex flex-col items-center justify-center space-x-2 sm:flex-row">
-            <div>© {currentYear} Yudistira Ashadi</div>
+            <div>© {currentYear} Cathy Xxxxxxxxx</div>
             <div>•</div>
             <div>
               Powered by{" "}

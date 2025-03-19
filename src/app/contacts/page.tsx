@@ -1,20 +1,19 @@
 import { Metadata } from "next";
 
-import { PortfolioList } from "@/components/portfolio";
 import { Container } from "@/components/container";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Portfolio of Cathy Xxxxxx",
+  title: "Contacts",
+  description: "Contacts for Cathy Xxxxxx",
 };
 
-export default function Portfolio() {
+export default function Contacts() {
   return (
     <Container>
       <section className="mb-12">
-        <h2 className="mb-4 text-5xl font-bold">Portfolio</h2>
+        <h2 className="mb-4 text-5xl font-bold">Contacts</h2>
         <p>
-          Toto
+          Contacts for Cathy Xxxxxx
         </p>
       </section>
 

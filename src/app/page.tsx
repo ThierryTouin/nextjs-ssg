@@ -13,7 +13,7 @@ import { Container } from "@/components/container";
 import { PortfolioCard } from "@/components/portfolio";
 import { FlipWords } from "@/components/flip-words";
 
-import photoYudis from "@/assets/images/photo_yudis.jpg";
+import photoYudis from "@/assets/images/photo_moi.jpg";
 
 import { portfolioData } from "@/data/portfolio";
 import { workData, monthNames } from "@/data/work";
@@ -32,7 +32,7 @@ export default function Home() {
                 Hello &#x1F44B;,
               </h2>
               <h2 className="mb-12 text-xl font-bold lg:text-2xl">
-                My name is Yudistira Ashadi
+                My name is Cathy Xxxxxx
               </h2>
 
               <div className="text-xl font-bold lg:text-2xl">I&apos;m a</div>
@@ -64,7 +64,7 @@ export default function Home() {
               {/* socials  */}
               <div className="mt-12 flex items-center space-x-8">
                 <Link
-                  href={"https://www.linkedin.com/in/yudistiraashadi/"}
+                  href={"https://www.linkedin.com/in/xxxxxxxx/"}
                   target="_blank"
                 >
                   {/* edit the icon so that it resize bigger and glow when hoverring */}
@@ -75,7 +75,7 @@ export default function Home() {
                 </Link>
 
                 <Link
-                  href={"https://github.com/yudistiraashadi"}
+                  href={"https://github.com/xxxxxxxx"}
                   target="_blank"
                 >
                   <IconBrandGithub
@@ -84,7 +84,7 @@ export default function Home() {
                   />
                 </Link>
 
-                <Link href={"https://x.com/yudistiraashadi"} target="_blank">
+                <Link href={"https://x.com/xxxxxxxxxxxxx"} target="_blank">
                   <IconBrandX
                     size={35}
                     className="duration-200 hover:scale-150 hover:text-yellow-500"
@@ -150,7 +150,7 @@ export default function Home() {
 
         {/* go to linkedin button */}
         <Link
-          href={"https://www.linkedin.com/in/yudistiraashadi/"}
+          href={"https://www.linkedin.com/in/xxxxxxxxxxxxxxxx/"}
           target="_blank"
           rel="noopener"
           className="flex w-full items-center justify-center rounded-lg border border-yellow-500 p-4 font-semibold text-yellow-500 duration-200 hover:bg-yellow-500 hover:text-black hover:underline"

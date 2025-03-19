@@ -7,7 +7,7 @@ import { portfolioData } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Portfolio of Yudistira Ashadi",
+  description: "Portfolio of Cathy Xxxxxx",
 };
 
 export default function Portfolio() {
