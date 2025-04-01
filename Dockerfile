@@ -1,10 +1,20 @@
 FROM node:22-alpine
 
+RUN npm install -g pnpm
+
+
 WORKDIR /app
 
-COPY package.json ./
+# Copier les fichiers et installer les dépendances
+COPY package.json pnpm-lock.yaml ./
+#COPY package.json ./
 
-RUN npm install
+#RUN pnpm install --frozen-lockfile
+RUN rm pnpm-lock.yaml
+RUN pnpm install
+
+
+#RUN npm install
 
 COPY . .
 
