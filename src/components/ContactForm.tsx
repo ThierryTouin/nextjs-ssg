@@ -1,6 +1,5 @@
-// components/ContactForm.tsx
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface FormData {
   name: string;
@@ -15,6 +14,13 @@ export default function ContactForm() {
     message: "",
   });
   const [status, setStatus] = useState<string | null>(null);
+  const [canSubmit, setCanSubmit] = useState(false);
+
+  // Temporisation avant d'autoriser la soumission du formulaire
+  useEffect(() => {
+    const timer = setTimeout(() => setCanSubmit(true), 2000); // Délai de 2 secondes
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -26,7 +32,7 @@ export default function ContactForm() {
     setStatus("Envoi en cours...");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -71,9 +77,17 @@ export default function ContactForm() {
         required
         className="border p-2 w-full rounded"
       />
-      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">
+
+      <button
+        type="submit"
+        disabled={!canSubmit}
+        className={`px-4 py-2 rounded ${
+          canSubmit ? "bg-blue-500 text-white" : "bg-gray-400 text-gray-700 cursor-not-allowed"
+        }`}
+      >
         Envoyer
       </button>
+
       {status && <p>{status}</p>}
     </form>
   );

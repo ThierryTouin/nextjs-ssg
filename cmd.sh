@@ -7,10 +7,10 @@ function display_help {
   echo "  cmd COMMAND [options] [arguments]"
   echo
   echo "front Commands:"
-  echo "  cmd up          Start the application"
-  echo "  cmd build       Build site"
-  echo "  cmd shell       Enter in container"
-  echo "  cmd shellr      Enter in container with root user"
+  echo "  cmd up..........Start the application"
+  echo "  cmd build.......Build site"
+  echo "  cmd shell.......Enter in container"
+  echo "  cmd shellr......Enter in container with root user"
   echo "  cmd clean.......Clean the application"
   echo
   exit 1
