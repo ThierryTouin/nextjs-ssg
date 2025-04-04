@@ -1,11 +1,12 @@
 "use client";
 
-import { useMemo } from "react";
+import { AwaitedReactNode, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, useMemo } from "react";
 import { AppShell, rem, Button, NavLink, Box, Burger } from "@mantine/core";
 import { useHeadroom, useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+//import { getAllArticlesMeta } from '@/lib/markdown';
 import {
   IconBrandLinkedin,
   IconBrandGithub,
@@ -26,6 +27,8 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
   const pinned = useHeadroom({ fixedAt: 140 });
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
+
+  //const articles = getAllArticlesMeta();
 
   const handleContacts = () => {
     const contacts = document.getElementById("contacts");
@@ -152,6 +155,26 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
               >
                 Contacts
               </Button>
+
+              <Button
+                component={Link}
+                href="/article-1"
+                size="xs"
+                radius="xl"
+                variant={
+                  pathname.startsWith("/article-1") ? "filled" : "subtle"
+                }
+                classNames={{
+                  label: "text-black dark:text-inherit",
+                }}
+              >
+                article-1
+              </Button>
+
+
+
+
+              
             </Box>
 
             <ToggleTheme />
@@ -193,6 +216,9 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
           component={Link}
           href="#contacs"
         />
+
+
+
       </AppShell.Navbar>
 
       <AppShell.Main

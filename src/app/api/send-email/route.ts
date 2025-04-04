@@ -21,7 +21,8 @@ export async function POST(req: Request) {
     const response = await resend.emails.send({
       //from: 'hello@yourdomain.com', // Doit être un domaine vérifié
       from: 'onboarding@resend.dev',
-      to: ['thierrytouin.pro@gmail.com','cathytouin@gmail.com'],
+      //to: ['thierrytouin.pro@gmail.com','cathytouin@gmail.com'],
+      to: ['cathytouin@gmail.com','thierrytouin.pro@gmail.com'],
       subject : 'Nouveau contact',
       html : `Nouveau message reçu de ${name} (${email}) : <br>${message}`,
     });
