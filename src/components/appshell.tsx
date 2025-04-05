@@ -6,7 +6,7 @@ import { useHeadroom, useDisclosure } from "@mantine/hooks";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-//import { getAllArticlesMeta } from '@/lib/markdown';
+//import { getAllSlugs } from '@/lib/markdown';
 import {
   IconBrandLinkedin,
   IconBrandGithub,
@@ -28,7 +28,7 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
 
   const currentYear = useMemo(() => new Date().getFullYear(), []);
 
-  //const articles = getAllArticlesMeta();
+  //const slugs = getAllSlugs();
 
   const handleContacts = () => {
     const contacts = document.getElementById("contacts");
@@ -169,6 +169,21 @@ export function DefaultAppShell({ children }: { children: React.ReactNode }) {
                 }}
               >
                 article-1
+              </Button>
+
+              <Button
+                component={Link}
+                href="/dillinger"
+                size="xs"
+                radius="xl"
+                variant={
+                  pathname.startsWith("/dillinger") ? "filled" : "subtle"
+                }
+                classNames={{
+                  label: "text-black dark:text-inherit",
+                }}
+              >
+                Dillinger
               </Button>
 
 

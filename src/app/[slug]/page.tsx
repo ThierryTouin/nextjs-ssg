@@ -1,5 +1,6 @@
 // /app/[slug]/page.tsx
 import { getAllSlugs, getMarkdownContent } from '@/lib/markdown';
+import { Container } from "@/components/container";
 
 type Props = {
   params: { slug: string };
@@ -14,9 +15,11 @@ export default async function MarkdownPage({ params }: Props) {
   const { contentHtml, metadata } = await getMarkdownContent(params.slug);
 
   return (
-    <main className="prose mx-auto p-4">
-      <h1>{metadata.title}</h1>
+    <Container>
+      <section className="mb-12">
+      <h2 className="mb-4 text-5xl font-bold">{metadata.title}</h2>
       <article dangerouslySetInnerHTML={{ __html: contentHtml }} />
-    </main>
+      </section>
+    </Container>
   );
 }

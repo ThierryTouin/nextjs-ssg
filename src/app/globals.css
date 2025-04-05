@@ -3,3 +3,37 @@
 }
 @tailwind components;
 @tailwind utilities;
+
+
+h1 {
+  @apply text-4xl font-bold text-gray-900;
+}
+
+h2 {
+  @apply text-2xl font-semibold text-gray-800 mt-6;
+}
+
+ul {
+  @apply list-disc list-inside ml-6 text-gray-700;
+}
+
+ol {
+  @apply list-decimal list-inside ml-6 text-gray-700;
+}
+
+li {
+  @apply mb-1;
+}
+
+code.language-sh {
+  display: block;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}

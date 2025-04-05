@@ -16,7 +16,7 @@ export default function Contacts() {
         <p>
           Contacts for Cathy Xxxxxx
         </p>
-        <h1 className="text-3xl font-bold mb-6">Contactez-nous</h1>
+        <h2 className="text-3xl font-bold mb-6">Contactez-nous</h2>
         <ContactForm />
       </section>
 
