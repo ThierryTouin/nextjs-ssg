@@ -13,3 +13,12 @@ Je m'appelle Cathy et je teste mon super site.
 
 - puce1
 - puce2
+
+
+## Ma section
+
+[Card title="A savoir"]
+Ce contenu sera affiché dans une carte.
+[/Card]
+
+Et voici un texte classique après.
