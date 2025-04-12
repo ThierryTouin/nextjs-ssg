@@ -33,7 +33,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/lib/remark-card-shortcode.ts-old", "src/lib/mdx.ts", "src/lib/markdown.ts-old", "src/lib/html-to-react.tsx-old"  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,5 +1,5 @@
-import { getAllSlugs, getMarkdownContent } from '@/lib/markdown'
-import { htmlToReactComponents } from '@/lib/html-to-react'
+// app/[slug]/page.tsx
+import { getAllSlugs, getMdxContent } from '@/lib/mdx'
 import { Container } from '@/components/container'
 
 type Props = {
@@ -11,14 +11,13 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }))
 }
 
-export default async function MarkdownPage({ params }: Props) {
-  const { contentHtml, metadata } = await getMarkdownContent(params.slug)
-  const content = htmlToReactComponents(contentHtml)
+export default async function Page({ params }: Props) {
+  const { content, frontmatter } = await getMdxContent(params.slug)
 
   return (
     <Container>
       <section className="mb-12">
-        <h2 className="mb-4 text-5xl font-bold">{metadata.title}</h2>
+        <h2 className="mb-4 text-5xl font-bold">{frontmatter.title}</h2>
         <article>{content}</article>
       </section>
     </Container>
