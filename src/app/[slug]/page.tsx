@@ -1,6 +1,7 @@
 // app/[slug]/page.tsx
 import { getAllSlugs, getMdxContent } from '@/lib/mdx'
 import { Container } from '@/components/container'
+import { ReactNode } from 'react'
 
 type Props = {
   params: { slug: string }
@@ -12,7 +13,11 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: Props) {
-  const { content, frontmatter } = await getMdxContent(params.slug)
+  const { content, frontmatter }: { content: ReactNode; frontmatter: Record<string, unknown> } = await getMdxContent(params.slug)
+
+  if (typeof frontmatter.title !== 'string') {
+    throw new Error('Invalid frontmatter: title is missing or not a string')
+  }
 
   return (
     <Container>
