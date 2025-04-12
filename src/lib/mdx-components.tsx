@@ -1,7 +1,7 @@
 // lib/mdx-components.tsx
+import { type useMDXComponents } from '@mdx-js/react'
 import Card from '@/components/Card'
-import type { MDXComponents } from 'mdx/types'
 
-export const mdxComponents: MDXComponents = {
-  Card, // rend le composant Card utilisable dans les fichiers .mdx
+export const mdxComponents: ReturnType<typeof useMDXComponents> = {
+  Card,
 }
